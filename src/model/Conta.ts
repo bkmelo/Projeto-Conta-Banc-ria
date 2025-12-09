@@ -1,7 +1,7 @@
 //Abaixo segue a classe a receita/ molde/modelo
 // 1. Classe/ Atributos sempre private e com _(underline)
 
-export class Conta{
+export abstract class Conta{
 
 private _numero:number;
 private _agencia:number;

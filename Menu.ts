@@ -1,9 +1,42 @@
 import  readlinesync = require("readline-sync");
 import {colors} from './src/util/colors';
-import {Conta} from './src/model/Contas'; 
+import {Conta} from './src/model/Conta'; 
+import { ContaCorrente} from "./src/model/ContaCorrente";
+import { ContaPoupanca } from "./src/model/ContaPoupanca";
 
 export function main() {
     let opcao: number;
+
+
+
+// *Bloco Apagado depois de transformar a classe Conta em Abstrata*
+//Objeto da Classe Conta (teste)
+//const conta: Conta = new Conta(1,123,1,"Bruna Melo",10000);
+//conta.visualizar();
+//conta.sacar(10500);
+//conta.visualizar();
+//conta.depositar(50000);
+//conta.visualizar();
+
+// Objeto da classe ContaCorrente (teste)
+
+const contacorrente: ContaCorrente = new ContaCorrente (2, 123,1, 'Mariana', 1500,1000);
+contacorrente.visualizar();
+contacorrente.sacar(20000);
+contacorrente.visualizar();
+contacorrente.depositar(1000);
+contacorrente.visualizar();
+
+//Objeto da classe ContaPoupanc (teste)
+
+const contapoupanca: ContaPoupanca = new ContaPoupanca(3, 123, 2, "Victor", 1000, 10);
+contapoupanca.visualizar();
+contapoupanca.sacar(200)
+contapoupanca.visualizar();
+contapoupanca.depositar(1000);
+contapoupanca.visualizar();
+
+
     while(true){
 
         console.log(colors.bg.black, colors.fg.yellow,
